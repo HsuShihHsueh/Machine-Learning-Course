@@ -9,4 +9,4 @@ Recreating PyTorch code from [ML2022-Spring-HW01](https://github.com/virginiakm1
 
 ## <div id='HW02'>[HW02](HW02) - Classification</div>
 Phoneme Classification<br>
-Report [[link](HW02/report_HW02.md)] (hyperparameter adjust, dropout analyze included)
+Report [[link](HW02/report_HW02.md)] (grid search to adjust hyperparameters、 dropout analyze included)
