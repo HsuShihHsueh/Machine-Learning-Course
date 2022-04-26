@@ -1,6 +1,7 @@
 
 
-# Dropout analyze
+# Dropout analyze (dropout percentage)
+
 dropout:0.0  
 [001/015] Train Acc: 0.572036 Loss: 1.412948 | Val Acc: 0.605974 loss: 1.267317  
 [002/015] Train Acc: 0.634832 Loss: 1.164692 | Val Acc: 0.634955 loss: 1.166348  
@@ -66,7 +67,71 @@ dropout:0.75
 [014/015] Train Acc: 0.555135 Loss: 1.478690 | Val Acc: 0.607511 loss: 1.273302  
 [015/015] Train Acc: 0.556988 Loss: 1.472936 | Val Acc: 0.608907 loss: 1.266522  
   
-
-
-#
+# Different dropout percentage on Subampling 
+dropout:0  
+[001/015] Train Acc: 0.490699 Loss: 1.678191 | Val Acc: 0.556983 loss: 1.447714  
+[002/015] Train Acc: 0.595725 Loss: 1.286081 | Val Acc: 0.580792 loss: 1.357655  
+[003/015] Train Acc: 0.649324 Loss: 1.095076 | Val Acc: 0.587105 loss: 1.346627  
+[004/015] Train Acc: 0.696478 Loss: 0.938009 | Val Acc: 0.590701 loss: 1.361195  
+[005/015] Train Acc: 0.737217 Loss: 0.807340 | Val Acc: 0.592251 loss: 1.408936  
+[006/015] Train Acc: 0.772367 Loss: 0.697243 | Val Acc: 0.592088 loss: 1.483947  
+[007/015] Train Acc: 0.802901 Loss: 0.603025 | Val Acc: 0.591427 loss: 1.567383  
+[008/015] Train Acc: 0.829820 Loss: 0.520635 | Val Acc: 0.587785 loss: 1.681037  
+[009/015] Train Acc: 0.853262 Loss: 0.448276 | Val Acc: 0.587078 loss: 1.801398  
+[010/015] Train Acc: 0.874398 Loss: 0.384897 | Val Acc: 0.581699 loss: 1.938984  
+[011/015] Train Acc: 0.892282 Loss: 0.329951 | Val Acc: 0.580460 loss: 2.080370  
+[012/015] Train Acc: 0.907607 Loss: 0.282746 | Val Acc: 0.576673 loss: 2.243804  
+[013/015] Train Acc: 0.920568 Loss: 0.243036 | Val Acc: 0.572823 loss: 2.404935  
+[014/015] Train Acc: 0.931621 Loss: 0.208681 | Val Acc: 0.571386 loss: 2.566870  
+[015/015] Train Acc: 0.940673 Loss: 0.180346 | Val Acc: 0.565505 loss: 2.712826  
+dropout:0.25  
+[001/015] Train Acc: 0.453804 Loss: 1.807634 | Val Acc: 0.558307 loss: 1.436524  
+[002/015] Train Acc: 0.545855 Loss: 1.462678 | Val Acc: 0.581387 loss: 1.342011  
+[003/015] Train Acc: 0.581195 Loss: 1.332257 | Val Acc: 0.592656 loss: 1.296740  
+[004/015] Train Acc: 0.605793 Loss: 1.240257 | Val Acc: 0.598695 loss: 1.275882  
+[005/015] Train Acc: 0.625217 Loss: 1.167769 | Val Acc: 0.605928 loss: 1.254051  
+[006/015] Train Acc: 0.642043 Loss: 1.106688 | Val Acc: 0.606978 loss: 1.251054  
+[007/015] Train Acc: 0.656977 Loss: 1.053616 | Val Acc: 0.609837 loss: 1.244305  
+[008/015] Train Acc: 0.670317 Loss: 1.008291 | Val Acc: 0.610423 loss: 1.245236  
+[009/015] Train Acc: 0.682036 Loss: 0.968331 | Val Acc: 0.612026 loss: 1.244690  
+[010/015] Train Acc: 0.692443 Loss: 0.934610 | Val Acc: 0.612681 loss: 1.248126  
+[011/015] Train Acc: 0.701542 Loss: 0.903982 | Val Acc: 0.615523 loss: 1.244983  
+[012/015] Train Acc: 0.709489 Loss: 0.877444 | Val Acc: 0.615302 loss: 1.252249  
+[013/015] Train Acc: 0.716586 Loss: 0.853560 | Val Acc: 0.615387 loss: 1.254485  
+[014/015] Train Acc: 0.723055 Loss: 0.832965 | Val Acc: 0.615400 loss: 1.259914  
+[015/015] Train Acc: 0.729334 Loss: 0.813383 | Val Acc: 0.616688 loss: 1.260392  
+dropout:0.50  
+[001/015] Train Acc: 0.398808 Loss: 2.011283 | Val Acc: 0.535408 loss: 1.529780  
+[002/015] Train Acc: 0.485053 Loss: 1.684509 | Val Acc: 0.561153 loss: 1.419092  
+[003/015] Train Acc: 0.514153 Loss: 1.578582 | Val Acc: 0.573374 loss: 1.366783  
+[004/015] Train Acc: 0.531384 Loss: 1.513360 | Val Acc: 0.583296 loss: 1.332275  
+[005/015] Train Acc: 0.544068 Loss: 1.466310 | Val Acc: 0.587811 loss: 1.308061  
+[006/015] Train Acc: 0.553759 Loss: 1.430575 | Val Acc: 0.592768 loss: 1.291077  
+[007/015] Train Acc: 0.561761 Loss: 1.401665 | Val Acc: 0.594981 loss: 1.280642  
+[008/015] Train Acc: 0.567310 Loss: 1.378987 | Val Acc: 0.598427 loss: 1.266523  
+[009/015] Train Acc: 0.573014 Loss: 1.358863 | Val Acc: 0.600659 loss: 1.259082  
+[010/015] Train Acc: 0.577503 Loss: 1.341946 | Val Acc: 0.601624 loss: 1.254344  
+[011/015] Train Acc: 0.581372 Loss: 1.326302 | Val Acc: 0.604786 loss: 1.244124  
+[012/015] Train Acc: 0.584920 Loss: 1.312687 | Val Acc: 0.606127 loss: 1.238494  
+[013/015] Train Acc: 0.588744 Loss: 1.300571 | Val Acc: 0.606783 loss: 1.235578  
+[014/015] Train Acc: 0.591067 Loss: 1.290354 | Val Acc: 0.606798 loss: 1.234266  
+[015/015] Train Acc: 0.593648 Loss: 1.280652 | Val Acc: 0.606849 loss: 1.234458  
+dropout:0.75  
+[001/015] Train Acc: 0.274203 Loss: 2.484375 | Val Acc: 0.467080 loss: 1.857589  
+[002/015] Train Acc: 0.370356 Loss: 2.117428 | Val Acc: 0.495174 loss: 1.707096  
+[003/015] Train Acc: 0.400743 Loss: 2.004469 | Val Acc: 0.512257 loss: 1.623440  
+[004/015] Train Acc: 0.418997 Loss: 1.937999 | Val Acc: 0.523970 loss: 1.570495  
+[005/015] Train Acc: 0.431910 Loss: 1.892145 | Val Acc: 0.531927 loss: 1.533677  
+[006/015] Train Acc: 0.440438 Loss: 1.859941 | Val Acc: 0.540035 loss: 1.503352  
+[007/015] Train Acc: 0.447671 Loss: 1.833605 | Val Acc: 0.541913 loss: 1.489677  
+[008/015] Train Acc: 0.453197 Loss: 1.814801 | Val Acc: 0.546528 loss: 1.471187  
+[009/015] Train Acc: 0.457926 Loss: 1.798611 | Val Acc: 0.549573 loss: 1.460587  
+[010/015] Train Acc: 0.461955 Loss: 1.784899 | Val Acc: 0.552765 loss: 1.449928  
+[011/015] Train Acc: 0.465023 Loss: 1.774191 | Val Acc: 0.554539 loss: 1.442821  
+[012/015] Train Acc: 0.467944 Loss: 1.763372 | Val Acc: 0.557095 loss: 1.434372  
+[013/015] Train Acc: 0.470436 Loss: 1.756095 | Val Acc: 0.559711 loss: 1.425307  
+[014/015] Train Acc: 0.472713 Loss: 1.748187 | Val Acc: 0.559671 loss: 1.424520  
+[015/015] Train Acc: 0.474620 Loss: 1.740817 | Val Acc: 0.560299 loss: 1.422418  
+  
+# 
 to be continue...
