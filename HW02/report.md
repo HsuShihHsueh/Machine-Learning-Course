@@ -67,6 +67,8 @@ _**0**_|_**0.686562**_|_**0.975996**_|_**0.653006**_|_**1.104825**_|
 
 
 # Dropout analyze (dropout percentage)
+#### Comparaison
+在不同dropout比例間，比較各個perfoemance
 
 hyperparameter |   |
 -------------- |---|
@@ -76,6 +78,7 @@ activative function| relu|
 hidden_dim     | 1450 | 
 optimer        | adamW|
 seed           | 0  |
+batch_size     |410(配合下面)|
 - control hyperparameter
 <img src="pic/report3.png" width="600">
 
@@ -143,6 +146,10 @@ dropout:0.75
 [013/015] Train Acc: 0.553963 Loss: 1.483944 | Val Acc: 0.605483 loss: 1.276090  
 [014/015] Train Acc: 0.555135 Loss: 1.478690 | Val Acc: 0.607511 loss: 1.273302  
 [015/015] Train Acc: 0.556988 Loss: 1.472936 | Val Acc: 0.608907 loss: 1.266522  
+#### Result
+In Epoch=15、Dropout=0, Train Acc(0.851) is hihger than Val Acc(0.631), hence the model may be overfit.  
+In Dropout=0.5, especially in Dropout=0.25, has higher accuracy to 0.677 and lower loss.
+These dropout can slow down slightly the cause of overfit.
   
 # Different dropout percentage on Subampling 
 
