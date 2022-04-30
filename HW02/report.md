@@ -68,7 +68,6 @@ _**0**_|_**0.686562**_|_**0.975996**_|_**0.653006**_|_**1.104825**_|
 
 # Dropout analyze (dropout percentage)
 
-#### control hyperparameter
 hyperparameter |   |
 -------------- |---|
 hidden_layer   | 3 |
@@ -77,6 +76,8 @@ activative function| relu|
 hidden_dim     | 1450 | 
 optimer        | adamW|
 seed           | 0  |
+- control hyperparameter
+<img src="pic/report3.png" width="600">
 
 dropout:0.0  
 [001/015] Train Acc: 0.572036 Loss: 1.412948 | Val Acc: 0.605974 loss: 1.267317  
@@ -144,6 +145,62 @@ dropout:0.75
 [015/015] Train Acc: 0.556988 Loss: 1.472936 | Val Acc: 0.608907 loss: 1.266522  
   
 # Different dropout percentage on Subampling 
+
+### Subampling
+[Explain](https://youtu.be/Lx3l4lOrquw?list=PLJV_el3uVTsPy9oCRY30oBPNLCo89yu49&t=834):  
+<img src="pic/report5.png" width="600">
+簡譯是指在同一mini-batch內，若各label平均分布，會比較好train  
+Code:
+```python
+from collections import deque
+import itertools
+
+def choice(a, size=None, replace=False):
+  return (np.random.random(size)*a).astype(np.int32)
+
+
+def shuffle(train_X,train_y):
+  category = [train_X[train_y==l,:] for l in np.unique(train_y)]
+  index = [deque(range(c.shape[0])) for c in category]
+
+  train_X2 = []
+  train_y2 = []
+
+  # speedup parameter
+  batch_per_label = int(batch_size / len(category))
+  len_label_category = len(category)
+  minibatch_number = int(train_y.shape[0]/batch_size*1.2)
+  label_unique = np.unique(train_y)
+  label_tmp_stat = np.repeat(label_unique,batch_per_label)
+  random_max = [len(i)-batch_per_label for i in index]
+
+  for _ in tqdm(range(minibatch_number)):
+    index_first_ten = [list(itertools.islice(index[i], 0, 10)) for i in range(len_label_category)]
+    data_tmp = np.concatenate([category[i][index_first_ten[i],:] for i in range(len_label_category)])
+    label_tmp = label_tmp_stat
+    random_shuffle = np.random.choice(batch_size,size=batch_size,replace=False)
+    data_tmp = data_tmp[random_shuffle,:]
+    label_tmp = label_tmp[random_shuffle]
+    train_X2.append(data_tmp)
+    train_y2.append(label_tmp)
+    for i in range(len_label_category):
+      random_putback = choice(random_max[i],size=batch_per_label)
+      [index[i].insert(random_putback[j],index[i][j]) for j in range(batch_per_label)]
+      [index[i].popleft() for j in range(batch_per_label)]
+  return train_X2, train_y2
+```
+
+hyperparameter |   |
+-------------- |---|
+hidden_layer   | 3 |
+concat_nframes | 7 |
+activative function| relu|
+hidden_dim     | 1450 | 
+optimer        | adamW|
+seed           | 0  |
+- control hyperparameter
+<img src="pic/report5.png" width="600">
+
 dropout:0  
 [001/015] Train Acc: 0.490699 Loss: 1.678191 | Val Acc: 0.556983 loss: 1.447714  
 [002/015] Train Acc: 0.595725 Loss: 1.286081 | Val Acc: 0.580792 loss: 1.357655  
@@ -208,6 +265,9 @@ dropout:0.75
 [013/015] Train Acc: 0.470436 Loss: 1.756095 | Val Acc: 0.559711 loss: 1.425307  
 [014/015] Train Acc: 0.472713 Loss: 1.748187 | Val Acc: 0.559671 loss: 1.424520  
 [015/015] Train Acc: 0.474620 Loss: 1.740817 | Val Acc: 0.560299 loss: 1.422418  
-  
-# 
+Result:
+training set達到94.1%，但在validation set上準確率依舊沒有起來
+於是試了dropout，在dropout=0.25,0.5時準確率有上升一點，但未做subsampling與相比，依舊沒比較好
+
+
 to be continue...
