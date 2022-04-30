@@ -265,9 +265,9 @@ dropout:0.75
 [013/015] Train Acc: 0.470436 Loss: 1.756095 | Val Acc: 0.559711 loss: 1.425307  
 [014/015] Train Acc: 0.472713 Loss: 1.748187 | Val Acc: 0.559671 loss: 1.424520  
 [015/015] Train Acc: 0.474620 Loss: 1.740817 | Val Acc: 0.560299 loss: 1.422418  
-Result:
-training set達到94.1%，但在validation set上準確率依舊沒有起來
-於是試了dropout，在dropout=0.25,0.5時準確率有上升一點，但未做subsampling與相比，依舊沒比較好
+Result:  
+training set達到94.1%，但在validation set上準確率依舊沒有起來  
+於是試了dropout，在dropout=0.25,0.5時準確率有上升一點，但未做subsampling與相比，依舊沒比較好  
 
-
+---
 to be continue...
