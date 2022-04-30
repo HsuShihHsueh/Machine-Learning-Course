@@ -148,7 +148,7 @@ dropout:0.75
 
 ### Subampling
 #### [Explain](https://youtu.be/Lx3l4lOrquw?list=PLJV_el3uVTsPy9oCRY30oBPNLCo89yu49&t=834):  
-<img src="pic/report5.png" width="600">
+<img src="pic/report4.png" width="600">
 簡譯是指在同一mini-batch內，若各label平均分布，會比較好train  
 
 #### Code:
