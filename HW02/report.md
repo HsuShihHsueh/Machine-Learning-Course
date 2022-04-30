@@ -148,7 +148,7 @@ dropout:0.75
 [015/015] Train Acc: 0.556988 Loss: 1.472936 | Val Acc: 0.608907 loss: 1.266522  
 #### Result
 In Epoch=15、Dropout=0, Train Acc(0.851) is hihger than Val Acc(0.631), hence the model may be overfit.  
-In Dropout=0.5, especially in Dropout=0.25, has higher accuracy to 0.677 and lower loss.
+In Dropout=0.5, especially in Dropout=0.25, has higher accuracy to 0.677 and lower loss.  
 These dropout can slow down slightly the cause of overfit.
   
 # Different dropout percentage on Subampling 
