@@ -36,7 +36,7 @@ transforms.RandomCrop(np.random.randint(350,500),pad_if_needed=True)
 
 reference:
 
-# ensemble and cross validation 
+# Ensemble and Cross validation 
 
 using
 [ensemble_train.ipynb](ML_HW03_Image_Classification_ensemble_train.ipynb)
