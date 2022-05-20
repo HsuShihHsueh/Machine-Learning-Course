@@ -14,4 +14,4 @@ Report [[link](HW02/Readme.md)] (grid search to adjust hyperparameters、 dropou
 
 ## <div id='HW03'>[HW03](HW03) - CNN</div>
 Image Classification<br>
-Report [[link](HW03/Readme.md)] ()
+Report [[link](HW03/Readme.md)] (Data Augmentation、Ensemble and Cross validation included)
