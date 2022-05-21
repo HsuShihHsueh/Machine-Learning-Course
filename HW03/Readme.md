@@ -1,5 +1,5 @@
 # Data Augmentation
-
+Do some image preprocessing to increse the quatity of data in disguised form. These process will make the model less prone to overfitting.
 ```python
 train_tfm = transforms.Compose([
     transforms.RandomRotation(10, expand=False, center=None),
@@ -26,12 +26,25 @@ transforms.RandomCrop(np.random.randint(350,500),pad_if_needed=True)
 # randomly crop the image to 350x350 ~ 500x500 px
 # pad_if_needed: 
 ```
+
 3. Resize
+```python
+transforms.Resize((128, 128)
+# resize image to 128x128 px
+```
 
 4. RandomHorizontalFlip
+```python
+transforms.RandomHorizontalFlip(p=0.5)
+# p: have 0.5 probability ot filp (half of images not change)
+```
 
 5. ColorJitter
-
+```python
+transforms.ColorJitter(brightness=(0.7,1.5), contrast=(0.7,1.3), saturation=(0.7,1.5)
+# (p1,p2): randomly change the color information from p1 ~ p2
+# brightness, contrast, saturation: 3 parameters to chage color information
+```
 
 
 reference:
