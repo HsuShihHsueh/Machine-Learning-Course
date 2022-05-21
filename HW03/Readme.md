@@ -71,7 +71,7 @@ to train 4 models,
 and using
 [ensemble_test.ipynb](HW03/ML_HW03_Image_Classification_ensemble_test.ipynb)
 to wrap up 4 models and make the final prediciton.  
-[Data]() in release included model and training&validation accuracy in each epoch.
+[Data](https://github.com/HsuShihHsueh/Machine-Learning-Course/releases/download/model/hw03_model.zip) in release included model and training&validation accuracy in each epoch.
 
 #### validation Result
 
