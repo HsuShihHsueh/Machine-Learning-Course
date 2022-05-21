@@ -19,32 +19,33 @@ transforms.RandomRotation(10, expand=False, center=None)
 # expand: whether keep the image on non-rectangle part
 # center: whether the rotate center is the image center
 ```
-<img src='' width=600px>
+<p align="center"><img src='pic/pic_rotate.png' width=600px></p>
 2. RandomCrop
 ```python
 transforms.RandomCrop(np.random.randint(350,500),pad_if_needed=True)
 # randomly crop the image to 350x350 ~ 500x500 px
 # pad_if_needed: 
 ```
-
+<p align="center"><img src='pic/pic_crop.png' width=600px></p>
 3. Resize
 ```python
 transforms.Resize((128, 128)
 # resize image to 128x128 px
 ```
-
+<p align="center"><img src='pic/pic_resize.png' width=600px></p>
 4. RandomHorizontalFlip
 ```python
 transforms.RandomHorizontalFlip(p=0.5)
 # p: have 0.5 probability ot filp (half of images not change)
 ```
-
+<p align="center"><img src='pic/pic_filp.png' width=600px></p>
 5. ColorJitter
 ```python
 transforms.ColorJitter(brightness=(0.7,1.5), contrast=(0.7,1.3), saturation=(0.7,1.5)
 # (p1,p2): randomly change the color information from p1 ~ p2
 # brightness, contrast, saturation: 3 parameters to chage color information
 ```
+<p align="center"><img src='pic/pic_jitter.png' width=600px></p>
 
 
 reference:
