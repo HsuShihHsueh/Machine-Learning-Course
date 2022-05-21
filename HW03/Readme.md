@@ -55,7 +55,8 @@ Reference: [常用图像处理与数据增强方法合集](https://blog.csdn.net
 
 # Ensemble and Cross validation 
 
-<a herf='https://youtu.be/GXLwjQ_O50g?t=457'><img src='pic/pic_cross.png' width=600px></a>
+<img src='pic/pic_cross.png' width=600px></a>  
+[▲ cross validation explain](https://youtu.be/GXLwjQ_O50g?t=457)
 
 **Q:** The result of prediction may be different in each model. How does it solve the ensembling problem?  
 In this program, I use voting which is processed by 'sorting the model from high to low according the accuracy. And use `scipy.stats.mode()` to find the mode and it choose the eariler index (more close to 0) when the same weight happened'.
@@ -66,6 +67,7 @@ Using
 to train 4 models,  
 `model_id` is used for recongnizing which model it is and determining how to distribute the training sets and validation sets.   
 <img src='pic/pic_modelID.png' width=600px>
+
 and using
 [ensemble_test.ipynb](HW03/ML_HW03_Image_Classification_ensemble_test.ipynb)
 to wrap up 4 models and make the final prediciton.  
