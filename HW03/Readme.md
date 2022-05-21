@@ -1,5 +1,5 @@
 # Data Augmentation
-Do some image preprocessing to increse the quatity of data in disguised form. These process will make the model less prone to overfitting.
+Do some image preprocessing to increase the quality of data in disguised form. This process will make the model less prone to overfitting.
 ```python
 train_tfm = transforms.Compose([
     transforms.RandomRotation(10, expand=False, center=None),
@@ -53,13 +53,13 @@ transforms.ColorJitter(brightness=(0.7,1.5), contrast=(0.7,1.3), saturation=(0.7
 
 Reference: [常用图像处理与数据增强方法合集](https://blog.csdn.net/qq_42951560/article/details/109852790)
 
-# Ensemble and Cross validation 
+# Ensemble and Cross-validation 
 
 <img src='pic/pic_cross.png' width=600px></a>  
 [▲ cross validation explain](https://youtu.be/GXLwjQ_O50g?t=457)
 
-**Q:** The result of prediction may be different in each model. How does it solve the ensembling problem?  
-In this program, I use voting which is processed by 'sorting the model from high to low according the accuracy. And use `scipy.stats.mode()` to find the mode and it choose the eariler index (more close to 0) when the same weight happened'.
+**Q:** The result of the prediction may be different in each model. How does it solve the ensembling problem?  
+In this program, I use voting which is processed by 'sorting the model from high to low according to the accuracy. And use `scipy.stats.mode()` to find the mode and choose the earlier index (more close to 0) when the same weight happened'.
 
 #### Description of each program
 Using
@@ -71,7 +71,7 @@ to train 4 models,
 and using
 [ensemble_test.ipynb](HW03/ML_HW03_Image_Classification_ensemble_test.ipynb)
 to wrap up 4 models and make the final prediciton.  
-[Data](https://github.com/HsuShihHsueh/Machine-Learning-Course/releases/download/model/hw03_model.zip) in release included model and training&validation accuracy in each epoch.
+[Data](https://github.com/HsuShihHsueh/Machine-Learning-Course/releases/download/model/hw03_model.zip) in the release included model and training&validation accuracy in each epoch.
 
 #### validation Result
 
